@@ -1,0 +1,17 @@
+minikube version #shiw ver minikube
+minikube start #create and run VM with k8s (default parameters)
+minikube stop 
+minikube delete
+minikube ssh
+
+minikube start --cpus=4 --memory=8gb --disk0size=5gb
+minikube start --cpus=4 --memory=6000mb --disk-size=1500mb
+minikube start -p TESTCLUSTER #create and run with name
+
+kubectl version
+kubectl version --clien
+kubectl get componentstatuses
+kubectl cluster-info
+kubectl get nodes
+kubectl label node node2 node-role.kubernetes.io/worker=
+
