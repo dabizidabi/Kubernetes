@@ -15,3 +15,4 @@ kubectl cluster-info
 kubectl get nodes
 kubectl label node node2 node-role.kubernetes.io/worker=
 
+1
