@@ -9,10 +9,15 @@ minikube start --cpus=4 --memory=6000mb --disk-size=1500mb
 minikube start -p TESTCLUSTER #create and run with name
 
 kubectl version
-kubectl version --clien
+kubectl version --client
 kubectl get componentstatuses
 kubectl cluster-info
 kubectl get nodes
 kubectl label node node2 node-role.kubernetes.io/worker=
 
-1
+kubectl get pods
+kubectl run test-pod --generator=run-pod/v1 --image=dabizidabi/app:v1 --port=80
+kubectl describe pods test-pod
+kubectl exec -it test-pod /bin/bash
+kubectl logs test-pod
+kubectl port-forward test-pod 1234:80 #forward ports interactive
