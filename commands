@@ -16,6 +16,7 @@ kubectl get nodes
 kubectl label node node2 node-role.kubernetes.io/worker=
 
 kubectl get pods
+ubectl get pods -n kube-system -o wide #watch more statu information
 kubectl run test-pod --generator=run-pod/v1 --image=dabizidabi/app:v1 --port=80
 kubectl describe pods test-pod
 kubectl exec -it test-pod /bin/bash
