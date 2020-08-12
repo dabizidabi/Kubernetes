@@ -22,3 +22,5 @@ kubectl describe pods test-pod
 kubectl exec -it test-pod /bin/bash
 kubectl logs test-pod
 kubectl port-forward test-pod 1234:80 #forward ports interactive
+
+kubectl apply -f pod.yml
