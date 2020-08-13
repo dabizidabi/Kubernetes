@@ -24,3 +24,12 @@ kubectl logs test-pod
 kubectl port-forward test-pod 1234:80 #forward ports interactive
 
 kubectl apply -f pod.yml
+
+kubectl get replicationcontroller #old term
+kubectl get replicaset
+kubectl describe replicaset myapp-replica #show more about replicaset
+kubectl delete replicaset myapp-replicaset #also delet all underlying PODs
+kubectl replace -f replica.yml
+kubectl scale -replicas=6 -f replica.yml
+
+kubectl edit replicaset myapp-replica #edit configuration replicaset directly
