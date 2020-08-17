@@ -33,3 +33,14 @@ kubectl replace -f replica.yml
 kubectl scale -replicas=6 -f replica.yml
 
 kubectl edit replicaset myapp-replica #edit configuration replicaset directly
+
+kubectl get deployments
+kubectl descrive deployment myapp-deploy
+kubectl get all
+kubectl create -f deploy.yml --record
+kubectl rollout history deploy/myapp
+kubectl rollout status deploy/myap
+kubectl rollout undo deploy/myap
+
+kubectl create -f service.yml
+kubectl get services
