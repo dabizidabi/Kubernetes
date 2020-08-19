@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: result-my-app-deploy
+  labels:
+    name: result-my-app-deploy
+    app: demo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: result-my-app
+      app: demo-app
+
+  template:    
+    metadata:
+       name: result-my-app
+       labels:
+         name: result-my-app
+         app: demo-app
+    spec:
+      containers:
+        - name: result-my-app
+          image: dabizidabi/myapp_result:v1
+          ports:
+            - containerPort: 80

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-my-app-deploy
+  labels:
+    name: front-my-app-deploy
+    app: demo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: front-my-app
+      app: demo-app
+
+  template:    
+    metadata:
+      name: front-my-app
+      labels:
+        name: front-my-app
+        app: demo-app
+    spec:
+      containers:
+        - name: front-my-app
+          image: dabizidabi/myapp:v1
+          ports:
+            - containerPort: 80
+

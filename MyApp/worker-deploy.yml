@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-deploy
+  labels:
+    name: worker-deploy
+    app: demo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: worker-pod
+      app: demo-app
+
+  template:    
+    metadata:
+      name: wordker-pod
+      labels:
+        name: worker-pod
+        app: demo-app
+    spec:
+      containers:
+        - name: wordker-app
+          image: dabizidabi/worker:v1
