@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: wordker-pod
+  labels:
+    name: worker-pod
+    app: demo-app
+spec:
+  containers:
+    - name: wordker-app
+      image: dabizidabi/worker:v1

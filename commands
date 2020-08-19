@@ -44,3 +44,5 @@ kubectl rollout undo deploy/myap
 
 kubectl create -f service.yml
 kubectl get services
+
+kubectl get pods,svc

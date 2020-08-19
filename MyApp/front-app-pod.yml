@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: front-my-app
+  labels:
+    name: front-my-app
+    app: demo-app
+spec:
+  containers:
+    - name: front-my-app
+      image: dabizidabi/myapp:v1
+      ports:
+        - containerPort: 80
