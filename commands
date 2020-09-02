@@ -16,7 +16,6 @@ kubectl get nodes
 kubectl label node node2 node-role.kubernetes.io/worker=
 
 kubectl get pods
-kubectl get pods --namespace=kube-system
 ubectl get pods -n kube-system -o wide #watch more statu information
 kubectl run test-pod --image=dabizidabi/app:v1 --port=80
 kubectl describe pods test-pod
@@ -47,3 +46,8 @@ kubectl create -f service.yml
 kubectl get services
 
 kubectl get pods,svc
+
+kubectl create namespace dev
+kubeclt get pods --all-namespaces #
+kubectl get pods --namespace=kube-system # kubectl -n kube-system get pods
+
