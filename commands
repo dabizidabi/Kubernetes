@@ -59,3 +59,6 @@ kubectl run custom-nginx --image=nginx --port=8080 #create a new pod called cust
 kubectl create ns dev-ns #Create a new namespace dev-ns
 kubectl create deployment redis-deploy --image redis --namespace=dev-ns --dry-run=client -o yaml > deploy.yaml  #Create the deployment YAML file
 
+kubectl get pods --selector env=dev #filter the output
+kubectl get all --selector env=prod,bu=finance,tier=frontend #filter the output
+
