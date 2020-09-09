@@ -51,7 +51,7 @@ kubectl create namespace dev
 kubeclt get pods --all-namespaces #
 kubectl get pods --namespace=kube-system # kubectl -n kube-system get pods
 
-------Some interatives commands-------
+----------------------------------------------------Some interatives commands----------------------------------------------------
 kubectl expose pod redis --port=6379 --name redis-service #Create a service redis-service
 kubectl create deployment webapp --image=kodekloud/webapp-color ##Create a service redis-service
 kubectl scale deployment/webapp --replicas=3 #scale the webapp to 3
@@ -61,4 +61,8 @@ kubectl create deployment redis-deploy --image redis --namespace=dev-ns --dry-ru
 
 kubectl get pods --selector env=dev #filter the output
 kubectl get all --selector env=prod,bu=finance,tier=frontend #filter the output
+
+----------------------------------------------------Taints and tolerations----------------------------------------------------
+kubectl describe nodes node01 | grep -i taint #taint node
+kubectl taint nodes node01 spray=mortein:NoSchedule #taint node01 with key of 'spray', value of 'mortein' and effect of 'NoSchedule'
 
