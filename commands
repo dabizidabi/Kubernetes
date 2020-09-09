@@ -16,6 +16,7 @@ kubectl get nodes
 kubectl label node node2 node-role.kubernetes.io/worker=
 
 kubectl get pods
+kubectl get pods -o wide
 ubectl get pods -n kube-system -o wide #watch more statu information
 kubectl run test-pod --image=dabizidabi/app:v1 --port=80
 kubectl describe pods test-pod
@@ -65,4 +66,8 @@ kubectl get all --selector env=prod,bu=finance,tier=frontend #filter the output
 ----------------------------------------------------Taints and tolerations----------------------------------------------------
 kubectl describe nodes node01 | grep -i taint #taint node
 kubectl taint nodes node01 spray=mortein:NoSchedule #taint node01 with key of 'spray', value of 'mortein' and effect of 'NoSchedule'
+
+----------------------------------------------------Labels & Affinity----------------------------------------------------
+kubeclt get nodes node01 --show-labels
+kubectl label node node01 color=blue
 
