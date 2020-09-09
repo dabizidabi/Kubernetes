@@ -1,0 +1,24 @@
+apiVersion: 1
+kind: Pod
+metadata:
+  name: my-app
+  labels:
+      app: myapp
+      type: front-end
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+  tolerations:
+    - key: "color"
+      value: "blue"
+      effect: "NoSchedule"
+      operator: "Equal"
+#kubectl create -f pod-definition.yml
+#
+#Kind:      Version:
+#
+#POD        v1
+#Service    v1
+#Replicaset apps/v1
+#Deployment apps/v1
