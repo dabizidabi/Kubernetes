@@ -47,6 +47,7 @@ kubectl create -f service.yml
 kubectl get services
 
 kubectl get pods,svc
+kubectl get pod webapp -o yaml > my-new-pod.yaml #save pod config in file
 
 kubectl create namespace dev
 kubeclt get pods --all-namespaces #
