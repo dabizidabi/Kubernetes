@@ -72,3 +72,7 @@ kubectl taint nodes node01 spray=mortein:NoSchedule #taint node01 with key of 's
 kubeclt get nodes node01 --show-labels
 kubectl label node node01 color=blue
 
+---------------------------------------------------Deamon Sets---------------------------------------------------
+kubectl get daemonsets --all-namespaces
+kubectl get all --all-namespaces
+kubectl describe daemonset kube-flannel-ds-amd64 --namespace=kube-system
