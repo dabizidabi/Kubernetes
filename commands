@@ -76,3 +76,6 @@ kubectl label node node01 color=blue
 kubectl get daemonsets --all-namespaces
 kubectl get all --all-namespaces
 kubectl describe daemonset kube-flannel-ds-amd64 --namespace=kube-system
+
+--------------------------------------------------Deamon Sets---------------------------------------------------
+kubectl logs -f name-of-pods

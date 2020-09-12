@@ -1,0 +1,22 @@
+apiVersion: 1
+kind: Pod
+metadata:
+  name: my-app
+  labels:
+      app: myapp
+      type: os
+spec:
+  containers:
+    - name: ubuntu-os
+      image: ubuntu
+      command: ["sleep"]
+      args: ["10"]
+
+#kubectl create -f pod-definition.yml
+#
+#Kind:      Version:
+#
+#POD        v1
+#Service    v1
+#Replicaset apps/v1
+#Deployment apps/v1
