@@ -79,3 +79,7 @@ kubectl describe daemonset kube-flannel-ds-amd64 --namespace=kube-system
 
 --------------------------------------------------Deamon Sets---------------------------------------------------
 kubectl logs -f name-of-pods
+
+--------------------------------------------------Config MAP---------------------------------------------------
+kubectl get configmaps
+kubectl describe configmaps db-config
