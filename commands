@@ -77,10 +77,16 @@ kubectl get daemonsets --all-namespaces
 kubectl get all --all-namespaces
 kubectl describe daemonset kube-flannel-ds-amd64 --namespace=kube-system
 
---------------------------------------------------Deamon Sets---------------------------------------------------
+-------------------------------------------------- Logs ---------------------------------------------------
 kubectl logs -f name-of-pods
 
 --------------------------------------------------Config MAP---------------------------------------------------
 kubectl get configmaps
 kubectl describe configmaps db-config
 kubectl create configmap webapp-color --from-literal=APP_COLOR=darkblue
+
+-------------------------------------------------- Secrets ---------------------------------------------------
+kubectl create secret generic app-secret --from-literal=DB_HOST=mysql \
+					 --from-literal=DB_User=root  \
+  					 --from-literal=DB_Passw0rd=passwd
+
