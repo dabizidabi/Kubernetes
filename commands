@@ -83,3 +83,4 @@ kubectl logs -f name-of-pods
 --------------------------------------------------Config MAP---------------------------------------------------
 kubectl get configmaps
 kubectl describe configmaps db-config
+kubectl create configmap webapp-color --from-literal=APP_COLOR=darkblue
