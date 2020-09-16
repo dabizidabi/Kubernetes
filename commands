@@ -90,3 +90,7 @@ kubectl create secret generic app-secret --from-literal=DB_HOST=mysql \
 					 --from-literal=DB_User=root  \
   					 --from-literal=DB_Passw0rd=passwd
 
+kubectl get secrets
+kubectl describe secrets
+echo -n 'passwd' | base64 #decode passwd
+echo -n 'sdfsHfHf' | base64 --decode
