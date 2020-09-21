@@ -94,3 +94,8 @@ kubectl get secrets
 kubectl describe secrets
 echo -n 'passwd' | base64 #decode passwd
 echo -n 'sdfsHfHf' | base64 --decode
+
+-----------------------------------------------------Cluster maintenance-----------------------------------------------
+kubectl drain node01 --ignore-daemonsets #mark node01 unschedulable
+kubectl uncordon node01  #mark node01 schedulable
+kubectl cordon node03 #mark node03 as unschedulable but do not remove any apps currently running on it
