@@ -99,3 +99,12 @@ echo -n 'sdfsHfHf' | base64 --decode
 kubectl drain node01 --ignore-daemonsets #mark node01 unschedulable
 kubectl uncordon node01  #mark node01 schedulable
 kubectl cordon node03 #mark node03 as unschedulable but do not remove any apps currently running on it
+
+---------------------------------------------------- RBAC -----------------------------------------------
+kubectl create -f devuser-developer-binding.yml
+kubectl get roles
+kubectl get rolebindings
+kubectl describe role developer
+kubectl describe rolebinding devuser-developer-binding
+kubectl auth can-i create deployments
+kubectl auth can-i create deployments --as dev-user #command if you'r admin
