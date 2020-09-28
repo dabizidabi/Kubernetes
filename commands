@@ -108,3 +108,6 @@ kubectl describe role developer
 kubectl describe rolebinding devuser-developer-binding
 kubectl auth can-i create deployments
 kubectl auth can-i create deployments --as dev-user #command if you'r admin
+
+---------------------------------------------------- Network Policy -----------------------------------------------
+kubectl get netpol #get network policy
