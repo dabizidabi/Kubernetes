@@ -111,3 +111,8 @@ kubectl auth can-i create deployments --as dev-user #command if you'r admin
 
 ---------------------------------------------------- Network Policy -----------------------------------------------
 kubectl get netpol #get network policy
+
+---------------------------------------------------- Volumes -----------------------------------------------
+kubectl get pv
+kubectl delete persistentvolumeclaim myclaim
+
